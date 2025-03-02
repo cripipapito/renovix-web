@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/renovix-web/static/css/main.3553ee70.css",
+    "main.js": "/renovix-web/static/js/main.508b3853.js",
+    "static/js/453.de1fb774.chunk.js": "/renovix-web/static/js/453.de1fb774.chunk.js",
+    "index.html": "/renovix-web/index.html",
+    "main.3553ee70.css.map": "/renovix-web/static/css/main.3553ee70.css.map",
+    "main.508b3853.js.map": "/renovix-web/static/js/main.508b3853.js.map",
+    "453.de1fb774.chunk.js.map": "/renovix-web/static/js/453.de1fb774.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3553ee70.css",
+    "static/js/main.508b3853.js"
+  ]
+}
