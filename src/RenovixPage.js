@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 
 export default function RenovixPage() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const [submitted, setSubmitted] = useState(false);
 
   // URLs de imágenes desde un repositorio confiable
   const images = {
@@ -58,39 +59,52 @@ export default function RenovixPage() {
         <p className="mt-4 text-lg">
           Déjanos tus datos y te contactaremos para ofrecerte una asesoría personalizada.
         </p>
-        <form
-          action="https://formsubmit.co/renovix.cl@gmail.com"
-          method="POST"
-          className="mt-6 max-w-lg mx-auto space-y-4 bg-white shadow-md p-6 rounded-lg"
-        >
-          <input type="hidden" name="_captcha" value="false" />
-          <input
-            type="text"
-            name="name"
-            placeholder="Tu Nombre"
-            className="w-full p-3 border rounded-lg focus:ring focus:ring-blue-400"
-            required
-          />
-          <input
-            type="email"
-            name="email"
-            placeholder="Correo Electrónico"
-            className="w-full p-3 border rounded-lg focus:ring focus:ring-blue-400"
-            required
-          />
-          <textarea
-            name="message"
-            placeholder="Cuéntanos sobre tu proyecto"
-            className="w-full p-3 border rounded-lg focus:ring focus:ring-blue-400 h-32"
-            required
-          />
-          <button
-            type="submit"
-            className="w-full bg-blue-700 text-white font-bold py-3 rounded-lg hover:bg-blue-800"
+
+        {/* Muestra mensaje de éxito si el formulario fue enviado */}
+        {submitted ? (
+          <div className="mt-6 bg-green-100 text-green-700 p-4 rounded-lg max-w-lg mx-auto">
+            ✅ ¡Formulario enviado correctamente! Nos pondremos en contacto contigo.
+          </div>
+        ) : (
+          <form
+            action="https://formsubmit.co/renovix.cl@gmail.com"
+            method="POST"
+            className="mt-6 max-w-lg mx-auto space-y-4 bg-white shadow-md p-6 rounded-lg"
+            onSubmit={() => setSubmitted(true)}
           >
-            Solicitar Asesoría
-          </button>
-        </form>
+            {/* Campos ocultos para configuración */}
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_next" value="https://cripipapito.github.io/renovix-web/gracias.html" />
+
+            {/* Campos del formulario */}
+            <input
+              type="text"
+              name="name"
+              placeholder="Tu Nombre"
+              className="w-full p-3 border rounded-lg focus:ring focus:ring-blue-400"
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Correo Electrónico"
+              className="w-full p-3 border rounded-lg focus:ring focus:ring-blue-400"
+              required
+            />
+            <textarea
+              name="message"
+              placeholder="Cuéntanos sobre tu proyecto"
+              className="w-full p-3 border rounded-lg focus:ring focus:ring-blue-400 h-32"
+              required
+            />
+            <button
+              type="submit"
+              className="w-full bg-blue-700 text-white font-bold py-3 rounded-lg hover:bg-blue-800"
+            >
+              Solicitar Asesoría
+            </button>
+          </form>
+        )}
       </section>
 
       {/* Footer */}
