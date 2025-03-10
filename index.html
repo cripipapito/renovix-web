@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Renovix - Energías Renovables</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container header-container">
+      <div class="brand-header">
+        <!-- Asegúrate de que tu logo esté en assets/images/logo.png -->
+        <a href="index.html">
+          <img src="assets/images/logo.png" alt="Logo Renovix" class="logo">
+        </a>
+        <h1 class="brand-name">RENOVIX</h1>
+      </div>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="about.html">Quiénes Somos</a></li>
+          <li><a href="services.html">Servicios</a></li>
+          <li><a href="contact.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section (bloquea el scroll hasta pulsar el botón) -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <div class="hero-slogan">
+        <h2 class="main-slogan">Energía Limpia para un Futuro Sostenible</h2>
+        <p class="sub-slogan">Únete al cambio con soluciones ecológicas y eficientes.</p>
+      </div>
+      <!-- Video con autoplay, muted (para garantizar autoplay) y un script que habilita el sonido tras el primer clic -->
+      <div class="video-container">
+        <video
+          autoplay
+          muted
+          playsinline
+          controls
+          width="100%"
+        >
+          <source src="assets/video/intro.mp4" type="video/mp4">
+          Tu navegador no soporta videos HTML5.
+        </video>
+      </div>
+      <!-- Botón CTA que desbloquea el scroll -->
+      <a href="#servicios" class="cta-button">Descubre nuestros servicios</a>
+    </div>
+  </section>
+
+  <!-- Sección de Servicios -->
+  <section id="servicios" class="services">
+    <div class="container">
+      <h2 class="section-title">Nuestros Servicios</h2>
+      <div class="service-grid">
+        <div class="service-item">
+          <h3>Instalación Fotovoltaica</h3>
+          <p>Soluciones llave en mano para sistemas solares residenciales y comerciales.</p>
+          <a href="fotovoltaica.html" class="service-link">Ver más</a>
+        </div>
+        <div class="service-item">
+          <h3>Instalación Eólica</h3>
+          <p>Proyectos eólicos adaptados a tus necesidades energéticas.</p>
+          <a href="eolica.html" class="service-link">Ver más</a>
+        </div>
+        <div class="service-item">
+          <h3>Eficiencia Energética</h3>
+          <p>Mejoramos el rendimiento energético de tu hogar o empresa.</p>
+          <a href="eficiencia.html" class="service-link">Ver más</a>
+        </div>
+        <div class="service-item">
+          <h3>Limpieza y Mantenimiento</h3>
+          <p>Mantén tus paneles en óptimas condiciones con nuestros servicios especializados.</p>
+          <a href="mantenimiento.html" class="service-link">Ver más</a>
+        </div>
+        <div class="service-item">
+          <h3>Certificación T1</h3>
+          <p>Aseguramos que tus instalaciones cumplan con las normas chilenas vigentes.</p>
+          <a href="certificacion.html" class="service-link">Ver más</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Renovix. Todos los derechos reservados.</p>
+      <p>Contacto: <a href="mailto:renovix.cl@gmail.com">renovix.cl@gmail.com</a></p>
+    </div>
+  </footer>
+
+  <!-- Botón fijo "Volver al inicio" -->
+  <button id="backToTop" title="Volver al inicio">Volver al inicio</button>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

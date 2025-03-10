@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contacto - Renovix</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <img src="assets/images/logo.png" alt="Renovix Logo" class="logo">
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="about.html">Quiénes Somos</a></li>
+          <li><a href="services.html">Servicios</a></li>
+          <li><a href="contact.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="contact">
+    <div class="container">
+      <h2>Contacto</h2>
+      <form id="contact-form">
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Mensaje:</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button type="submit" class="cta-button">Enviar Mensaje</button>
+      </form>
+      <div id="form-response" style="display:none; margin-top:20px; color:green;">
+        ¡Su mensaje fue recibido con éxito y nos pondremos en contacto a la brevedad!
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Renovix. Todos los derechos reservados.</p>
+      <p>Contacto: <a href="mailto:renovix.cl@gmail.com">renovix.cl@gmail.com</a></p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script>
+    // Manejo del formulario de contacto usando Formspree o Getform (solución gratuita para páginas estáticas)
+    // Por ejemplo, usando Formspree:
+    const form = document.getElementById('contact-form');
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const formData = new FormData(form);
+      fetch("https://formspree.io/f/{tu_form_id}", { // Reemplaza {tu_form_id} por tu ID de Formspree
+        method: "POST",
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      }).then(response => {
+        if (response.ok) {
+          form.reset();
+          document.getElementById('form-response').style.display = 'block';
+        }
+      }).catch(error => {
+        console.error("Error en el envío:", error);
+      });
+    });
+  </script>
+</body>
+</html>
