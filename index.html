@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <!-- Optimización para móviles -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- SEO Meta tags -->
+  <meta name="description" content="Renovix - Energías Renovables en Chile. Energía limpia para un futuro sostenible.">
+  <meta name="keywords" content="Renovix, Energías Renovables, Chile, Energía Solar, Energía Eólica, Eficiencia Energética, Mantenimiento, Certificación T1">
+  <!-- Política de Seguridad Básica -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; img-src 'self' data:;">
+  <title>Renovix - Energías Renovables</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container header-container">
+      <div class="brand-header">
+        <!-- Asegúrate de que tu logo esté en assets/images/logo.png -->
+        <a href="index.html">
+          <img src="assets/images/logo.png" alt="Logo Renovix" class="logo">
+        </a>
+        <h1 class="brand-name">RENOVIX</h1>
+      </div>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="about.html">Quiénes Somos</a></li>
+          <li><a href="services.html">Servicios</a></li>
+          <li><a href="contact.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section (inicialmente con scroll bloqueado) -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <div class="hero-slogan">
+        <h2 class="main-slogan">Energía Limpia para un Futuro Sostenible</h2>
+        <p class="sub-slogan">Únete al cambio con soluciones ecológicas y eficientes.</p>
+      </div>
+      <!-- Video con autoplay, muted y playsinline -->
+      <div class="video-container">
+        <video autoplay muted playsinline controls width="100%">
+          <source src="assets/video/intro.mp4" type="video/mp4">
+          Tu navegador no soporta videos HTML5.
+        </video>
+      </div>
+      <!-- Botón CTA que desbloquea el scroll -->
+      <a href="#servicios" class="cta-button">Descubre nuestros servicios</a>
+    </div>
+  </section>
+
+  <!-- Sección de Servicios (muestra módulos y enlaces a services.html) -->
+  <section id="servicios" class="services">
+    <div class="container">
+      <h2 class="section-title">Nuestros Servicios</h2>
+      <div class="service-grid">
+        <div class="service-item">
+          <h3>Instalación Fotovoltaica</h3>
+          <p>Soluciones llave en mano para sistemas solares residenciales y comerciales.</p>
+          <!-- Enlace con ancla -->
+          <a href="services.html#fotovoltaica" class="service-link">Ver más</a>
+        </div>
+        <div class="service-item">
+          <h3>Instalación Eólica</h3>
+          <p>Proyectos eólicos adaptados a tus necesidades energéticas.</p>
+          <a href="services.html#eolica" class="service-link">Ver más</a>
+        </div>
+        <div class="service-item">
+          <h3>Eficiencia Energética</h3>
+          <p>Mejoramos el rendimiento energético de tu hogar o empresa.</p>
+          <a href="services.html#eficiencia" class="service-link">Ver más</a>
+        </div>
+        <div class="service-item">
+          <h3>Limpieza y Mantenimiento</h3>
+          <p>Mantén tus paneles en óptimas condiciones con nuestros servicios especializados.</p>
+          <a href="services.html#mantenimiento" class="service-link">Ver más</a>
+        </div>
+        <div class="service-item">
+          <h3>Certificación T1</h3>
+          <p>Aseguramos que tus instalaciones cumplan con las normas chilenas vigentes.</p>
+          <a href="services.html#certificacion" class="service-link">Ver más</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Renovix. Todos los derechos reservados.</p>
+      <p>Contacto: <a href="mailto:renovix.cl@gmail.com">renovix.cl@gmail.com</a></p>
+    </div>
+  </footer>
+
+  <!-- Botón fijo "Volver al inicio" -->
+  <button id="backToTop" title="Volver al inicio">Volver al inicio</button>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
