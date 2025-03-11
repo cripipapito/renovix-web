@@ -1,17 +1,17 @@
 document.addEventListener('DOMContentLoaded', function(){
-  // Bloquear el scroll inicialmente
-  document.body.classList.add('no-scroll');
-
-  // Manejo del botón CTA
+  // Solo en index: si existe el botón CTA, bloqueamos el scroll inicialmente
   const ctaButton = document.querySelector('.cta-button');
-  ctaButton.addEventListener('click', function(e){
-    e.preventDefault();
-    // Remover la clase que bloquea el scroll
-    document.body.classList.remove('no-scroll');
-    // Desplazamiento suave a la sección de servicios
-    document.querySelector('#servicios').scrollIntoView({ behavior: 'smooth' });
-  });
-
+  if(ctaButton){
+    document.body.classList.add('no-scroll');
+    ctaButton.addEventListener('click', function(e){
+      e.preventDefault();
+      // Remover la clase que bloquea el scroll
+      document.body.classList.remove('no-scroll');
+      // Desplazamiento suave a la sección de servicios
+      document.querySelector('#servicios').scrollIntoView({ behavior: 'smooth' });
+    });
+  }
+  
   // Botón "Volver al inicio" - se muestra al hacer scroll
   const backToTop = document.getElementById('backToTop');
   window.addEventListener('scroll', function(){
@@ -24,8 +24,8 @@ document.addEventListener('DOMContentLoaded', function(){
   backToTop.addEventListener('click', function(){
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
-
-  // Habilitar audio tras el primer clic
+  
+  // Habilitar audio tras el primer clic (aplicable en index)
   const video = document.querySelector('video');
   function enableAudio() {
     if (video) {
